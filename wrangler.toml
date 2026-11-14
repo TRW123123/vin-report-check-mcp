@@ -1,0 +1,7 @@
+name = "vin-report-check"
+main = "src/index.ts"
+compatibility_date = "2026-11-03"
+# No route / custom domain on purpose: production deploy only after Safak's approval.
+[dev]
+port = 8794
+ip = "127.0.0.1"
