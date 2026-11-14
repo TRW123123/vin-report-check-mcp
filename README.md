@@ -7,7 +7,7 @@ Remote MCP server for private car sellers in the US market. It decodes the basic
 - Registry name (prepared): `com.aicarvideo/vin-report-check`
 - Website: https://aicarvideo.com
 - Developer: AI Car Video (operated by Safak Tepecik)
-- GitHub: https://github.com/TRW123123/vin-report-check-mcp (repository will be created after this work)
+- GitHub: https://github.com/TRW123123/vin-report-check-mcp
 - License: MIT
 - Transport: Streamable HTTP, JSON-RPC 2.0 on `POST /mcp`; `GET /health`; protocol versions 2025-03-26, 2025-06-18, 2025-11-25
 
@@ -27,9 +27,9 @@ Remote MCP server for private car sellers in the US market. It decodes the basic
 
 ## Status
 
-Version 0.1.0, built and tested locally (Vitest, `wrangler dev` smoke).
+Version 0.1.0. 59 Vitest tests green (vPIC mocked). Secret-scan clean.
 
-- **Public preview (free Netlify Function, same code):** `https://vin-report-check-mcp.netlify.app/mcp`. Placeholder: the URL will be confirmed after deploy. Adapter: `netlify/functions/mcp.ts`.
+- **Public preview (free Netlify Function, same code):** `https://vin-report-check-mcp.netlify.app/mcp` — checked on 14.11.2026 (Europe/Berlin) with curl (health 200, initialize, tools/list, tools/call positive and negative, GET /mcp 405, OPTIONS 204). Adapter: `netlify/functions/mcp.ts`. Manual deploy, not linked to GitHub.
 - **Production: still open.** The URL `https://vin-mcp.aicarvideo.com/mcp` in `server.json` is the planned address. It needs Safak's OK and a Cloudflare login. Not deployed, no DNS change, no registry submission yet.
 
 ## Run and test locally
